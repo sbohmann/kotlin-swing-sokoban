@@ -2,7 +2,6 @@ package at.yeoman.examples.kotlin.swing.stacks
 
 import at.yeoman.examples.kotlin.swing.ViewControl
 import java.awt.GridLayout
-import javax.swing.JComponent
 import javax.swing.JPanel
 
 class VStack() : ViewControl {
@@ -13,9 +12,9 @@ class VStack() : ViewControl {
         view.layout = layout
     }
 
-    fun add(subView: JComponent): VStack {
+    fun add(control: ViewControl): VStack {
         ++ layout.rows
-        subView.add(subView)
+        view.add(control.view)
         return this
     }
 }

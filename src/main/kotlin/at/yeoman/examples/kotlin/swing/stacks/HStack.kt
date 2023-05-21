@@ -13,9 +13,9 @@ class HStack() : ViewControl {
         view.layout = layout
     }
 
-    fun add(subView: JComponent): HStack {
+    fun add(control: ViewControl): HStack {
         ++ layout.rows
-        subView.add(subView)
+        view.add(control.view)
         return this
     }
 }
