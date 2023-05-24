@@ -7,14 +7,13 @@ import javax.swing.JPanel
 
 class HStack() : ViewControl {
     override val view = JPanel()
-    val layout = GridLayout(1, 0)
+    private val layout = GridLayout(1, 0)
 
     init {
         view.layout = layout
     }
 
     fun add(control: ViewControl): HStack {
-        ++ layout.rows
         view.add(control.view)
         return this
     }

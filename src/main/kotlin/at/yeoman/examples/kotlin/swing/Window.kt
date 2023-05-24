@@ -10,12 +10,14 @@ class Window {
         jframe.defaultCloseOperation = JFrame.DISPOSE_ON_CLOSE
     }
 
-    fun add(control: ViewControl) {
+    fun add(control: ViewControl): Window {
         jframe.contentPane.add(control.view, BorderLayout.CENTER)
+        return this
     }
 
     fun show() {
         jframe.pack()
+        jframe.setLocationRelativeTo(null)
         jframe.isVisible = true
     }
 

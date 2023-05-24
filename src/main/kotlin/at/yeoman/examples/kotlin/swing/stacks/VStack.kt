@@ -6,14 +6,13 @@ import javax.swing.JPanel
 
 class VStack() : ViewControl {
     override val view = JPanel()
-    val layout = GridLayout(0, 1)
+    private val layout = GridLayout(0, 1)
 
     init {
         view.layout = layout
     }
 
     fun add(control: ViewControl): VStack {
-        ++ layout.rows
         view.add(control.view)
         return this
     }
