@@ -5,4 +5,10 @@ import javax.swing.JButton
 
 class Button(text: String) : ViewControl {
     override val view = JButton(text)
+
+    fun onClick(action: () -> Unit) {
+        view.addActionListener {
+            action()
+        }
+    }
 }

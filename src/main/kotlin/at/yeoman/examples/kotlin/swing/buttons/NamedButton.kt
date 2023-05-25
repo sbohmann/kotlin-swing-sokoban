@@ -11,4 +11,8 @@ class NamedButton(text: String) : ViewControl {
             .add(Label(text).centered())
             .add(button)
     override val view = stack.view
+
+    fun onClick(action: () -> Unit) {
+        button.onClick(action)
+    }
 }

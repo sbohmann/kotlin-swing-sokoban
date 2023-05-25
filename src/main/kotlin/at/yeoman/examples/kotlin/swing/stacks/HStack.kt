@@ -17,4 +17,8 @@ class HStack() : ViewControl {
         view.add(control.view)
         return this
     }
+
+    fun clear() {
+        view.removeAll()
+    }
 }
