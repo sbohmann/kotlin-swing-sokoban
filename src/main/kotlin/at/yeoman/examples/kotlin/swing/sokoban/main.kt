@@ -5,15 +5,12 @@ import at.yeoman.examples.kotlin.swing.Window
 import at.yeoman.examples.kotlin.swing.buttons.Button
 import at.yeoman.examples.kotlin.swing.buttons.NamedButton
 import at.yeoman.examples.kotlin.swing.stacks.VStack
+import java.awt.EventQueue
 import javax.swing.JButton
 import javax.swing.SwingUtilities
 
 fun main() {
-    runApplication(::run)
-}
-
-fun runApplication(application: () -> Unit) {
-    SwingUtilities.invokeAndWait(application)
+    EventQueue.invokeAndWait(::run)
 }
 
 fun run() {
