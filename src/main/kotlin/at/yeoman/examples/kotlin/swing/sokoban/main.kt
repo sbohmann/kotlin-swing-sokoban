@@ -12,7 +12,6 @@ import javax.swing.SwingUtilities
 import javax.swing.UIManager
 
 fun main() {
-    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName())
     EventQueue.invokeAndWait(::run)
 }
 
