@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.7.10"
+    application
 }
 
 group = "org.example"
@@ -13,6 +14,10 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+}
+
+application {
+    mainClass.set("at.yeoman.examples.kotlin.swing.sokoban.MainKt")
 }
 
 tasks.test {
