@@ -7,9 +7,12 @@ import at.yeoman.examples.kotlin.swing.buttons.NamedButton
 import at.yeoman.examples.kotlin.swing.stacks.VStack
 import java.awt.EventQueue
 import javax.swing.JButton
+import javax.swing.LookAndFeel
 import javax.swing.SwingUtilities
+import javax.swing.UIManager
 
 fun main() {
+    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName())
     EventQueue.invokeAndWait(::run)
 }
 
