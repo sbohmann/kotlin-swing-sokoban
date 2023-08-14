@@ -19,7 +19,7 @@ class Toggles(list: List<String>) : ViewControl {
 
     fun setList(list: List<String>) {
         this.list = list.toMutableList()
-        stack.removeAll()
+        stack.clear()
         buttonForName.clear()
         buildView()
     }
